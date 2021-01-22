@@ -1,0 +1,285 @@
+---
+layout: default
+title: Главная
+---
+
+<section class="intro intro_home">
+    <div class="container position-relative">
+
+        <div class="arrows-slide">
+            <button class="arrows-slide__prev" id="intro-slides-arrows-prev">
+                {{> arrow }}
+            </button>
+            <button class="arrows-slide__next" id="intro-slides-arrows-next">
+                {{> arrow }}
+            </button>
+        </div>
+
+        <div id="intro-slides">
+
+            <div>
+                {{> intro-slide }}
+            </div>
+
+            <div>
+                {{> intro-slide }}
+            </div>
+
+            <div>
+                {{> intro-slide }}
+            </div>
+
+            <div>
+                {{> intro-slide }}
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="category">
+    <div class="container">
+        <h4 class="section-subtitle">Каталог</h4>
+        <h2 class="section-title">Категории</h2>
+
+        <div class="category-wrap">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <a class="category-item" href="#">
+                        <div class="category-item__img">
+                            <img src="assets/img/category/decor.png" alt="Декор для дома">
+                        </div>
+
+                        <h4 class="category-item__title">
+                            Декор для дома
+                        </h4>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <a class="category-item" href="#">
+                        <div class="category-item__img">
+                            <img src="assets/img/category/presents.png" alt="Подарки">
+                        </div>
+
+                        <h4 class="category-item__title">
+                            Подарки
+                        </h4>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <a class="category-item" href="#">
+                        <div class="category-item__img">
+                            <img src="assets/img/category/holidays.png" alt="Праздники">
+                        </div>
+
+                        <h4 class="category-item__title">
+                            Праздники
+                        </h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="advantages">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="advantages-item">
+                    <svg class="advantages-item__icon">
+                        <use xlink:href="#advs-box"></use>
+                    </svg>
+                    <h5 class="advantages-item__title">
+                        Быстрая доставка
+                    </h5>
+                    <p class="small-txt advantages-item__txt">
+                        Разнообразный и богатый опыт, консультация с широким активом требуют от нас анализа систем
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="advantages-item">
+                    <svg class="advantages-item__icon">
+                        <use xlink:href="#advs-piggy-bank"></use>
+                    </svg>
+                    <h5 class="advantages-item__title">
+                        Удобные способы оплаты
+                    </h5>
+                    <p class="small-txt advantages-item__txt">
+                        Разнообразный и богатый опыт, консультация с широким активом требуют от нас анализа систем
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="advantages-item">
+                    <svg class="advantages-item__icon">
+                        <use xlink:href="#advs-headphones"></use>
+                    </svg>
+                    <h5 class="advantages-item__title">
+                        Онлайн поддержка
+                    </h5>
+                    <p class="small-txt advantages-item__txt">
+                        Разнообразный и богатый опыт, консультация с широким активом требуют от нас анализа систем
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="popular-products">
+    <div class="container position-relative">
+        <h4 class="section-subtitle">Большие скидки</h4>
+        <h2 class="section-title">Популярные товары</h2>
+
+        <div class="arrows-slide">
+            <button class="arrows-slide__prev" id="products-slides-arrows-prev">
+                {{> arrow }}
+            </button>
+            <button class="arrows-slide__next" id="products-slides-arrows-next">
+                {{> arrow }}
+            </button>
+        </div>
+
+        <div class="popular-products-slides" id="popular-products-slides">
+            <div class="popular-slides__item">
+                {{> decor-table }}
+            </div>
+
+            <div class="popular-slides__item">
+                {{> aroma-candle }}
+            </div>
+
+            <div class="popular-slides__item">
+                {{> dish-santa }}
+            </div>
+
+            <div class="popular-slides__item">
+                {{> jar-for-sweets-house }}
+            </div>
+
+            <div class="popular-slides__item">
+                {{> decor-table }}
+            </div>
+
+            <div class="popular-slides__item">
+                {{> aroma-candle }}
+            </div>
+
+            <div class="popular-slides__item">
+                {{> dish-santa }}
+            </div>
+
+            <div class="popular-slides__item">
+                {{> jar-for-sweets-house }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="candle-banner">
+    <div class="container">
+        <div class="candle-banner__wrapper">
+            <div class="candle-banner__content">
+                <h2 class="candle-banner__title">
+                    Арома свечи “VALLAGE”
+                </h2>
+                <a class="btn btn_red candle-banner__btn" href="#">
+                    Перейти к товарам
+                    {{> arrow }}
+                </a>
+            </div>
+
+            <div class="candle-banner__img">
+                <img src="assets/img/candle.png" alt="Свечи">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="latest-arrs">
+    <div class="container">
+        <h4 class="section-subtitle">Большие скидки</h4>
+        <h2 class="section-title">Последние поступления</h2>
+
+        <div class="tabs">
+            <a class="tabs__btn active" href="#">
+                Новинки
+            </a>
+            <a class="tabs__btn" href="#">
+                Хиты продаж
+            </a>
+            <a class="tabs__btn" href="#">
+                Акции
+            </a>
+        </div>
+
+        <div class="row latest-arrs-products">
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> decor-table }}
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> aroma-candle }}
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> dish-santa }}
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> jar-for-sweets-house }}
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> decor-table }}
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> aroma-candle }}
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> dish-santa }}
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                {{> jar-for-sweets-house }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="popular-articles">
+    <div class="container position-relative">
+        <h4 class="section-subtitle">Блог</h4>
+        <h2 class="section-title">Популярные статьи</h2>
+
+        <div class="arrows-slide">
+            <button class="arrows-slide__prev" id="articles-slides-arrows-prev">
+                {{> arrow }}
+            </button>
+            <button class="arrows-slide__next" id="articles-slides-arrows-next">
+                {{> arrow }}
+            </button>
+        </div>
+
+        <div class="articles-slides" id="articles-slides">
+            {{> year-rat }}
+
+            {{> european-tree }}
+
+            {{> year-rat }}
+
+            {{> european-tree }}
+
+            {{> year-rat }}
+
+            {{> european-tree }}
+        </div>
+    </div>
+</section>

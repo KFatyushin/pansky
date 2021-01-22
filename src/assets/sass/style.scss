@@ -1,0 +1,139 @@
+@import "vars";
+
+
+/* Fonts */
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.ttf") format("ttf"), url("../fonts/#{$file_name}.eot") format("eot");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+@import "fonts";
+
+
+/* Default styles */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    padding: 100px 0;
+
+    @media (max-width: 992px) {
+        padding: 70px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 50px 0;
+    }
+}
+
+.section-title {
+    font-size: 36px;
+
+    margin: 2px 0 26px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: $yellow;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.small-txt {
+    font-size: 12px;
+    line-height: 20px;
+    color: $dark-gray;
+}
+
+@import "blocks/buttons";
+
+
+/* Bootstrap */
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/utilities/display";
+@import "../../../node_modules/bootstrap/scss/utilities/flex";
+@import "../../../node_modules/bootstrap/scss/utilities/position";
+@import "../../../node_modules/bootstrap/scss/utilities/spacing";
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/main-menu";
+@import "blocks/submenu";
+@import "blocks/mobile-menu";
+@import "blocks/hamburger";
+@import "blocks/menu-categories1";
+@import "blocks/categories-icon";
+@import "blocks/submenu-categories";
+@import "blocks/languages";
+@import "blocks/search";
+@import "blocks/basket";
+@import "blocks/arrow";
+@import "blocks/intro";
+@import "blocks/intro-slides";
+@import "blocks/intro-slides-arrow";
+@import "blocks/intro-slides-dots";
+@import "blocks/breadcrumbs";
+@import "blocks/category";
+@import "blocks/advantages";
+@import "blocks/candle-banner";
+@import "blocks/product-item";
+@import "blocks/popular-product-slides";
+@import "blocks/arrow-slide";
+@import "blocks/tabs";
+@import "blocks/latest-arrs";
+@import "blocks/popular-articles";
+@import "blocks/articles-slides";
+@import "blocks/mailing";
+@import "blocks/footer";
+@import "blocks/footer-menu";
+@import "blocks/footer-contacts";
+@import "blocks/shop";
+@import "blocks/sorting";
+@import "blocks/filters";
+@import "blocks/number-products";
+
+/* Vendor libs */
+@import "vendor/slick";

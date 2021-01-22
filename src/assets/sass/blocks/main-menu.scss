@@ -1,0 +1,46 @@
+.main-menu {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+
+    &__item {
+        margin: 0 20px;
+    }
+
+    &__link {
+        font-weight: 600;
+
+        position: relative;
+    }
+    &__item_has-children &__link {
+        padding-right: 11px;
+
+        &:before {
+            content: '';
+
+            width: 5px;
+            height: 5px;
+            border-bottom: 1px solid $black;
+            border-right: 1px solid $black;
+            transform: rotate(45deg);
+
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -4px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-menu {
+        justify-content: space-between;
+
+        &__item {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.popular-products-slides {
+    margin: 0 -15px;
+
+    @media (max-width: 480px) {
+        & {
+            margin: 0 -5px;
+        }
+
+        .slick-slide {
+            padding: 0 5px;
+        }
+    }
+}

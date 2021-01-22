@@ -1,0 +1,48 @@
+.main-submenu {
+    display: none;
+    background: $white;
+
+    padding-top: 33px;
+    position: absolute;
+    left: 50%;
+    margin-left: -467px;
+
+    animation: submenu-animation .5s ease;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 25px;
+        width: 935px;
+        box-shadow: $menu-shadow;
+
+        padding: 50px;
+    }
+
+    &__item {
+        padding-left: 8px;
+    }
+
+    &__link {
+
+        position: relative;
+
+        &:before {
+            content: '•';
+            color: $black;
+
+            position: absolute;
+            left: -7px;
+        }
+    }
+}
+
+.main-menu__item_has-children:hover .main-submenu {
+    display: block;
+}
+
+@keyframes submenu-animation {
+    from {
+        padding-top: 0;
+    }
+}

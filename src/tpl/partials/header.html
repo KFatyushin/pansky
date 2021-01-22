@@ -1,0 +1,60 @@
+<header class="header" id="header">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-5 col-lg-2">
+                <a class="logo" href="/">
+                    <img src="assets/img/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="order-1 order-lg-0 col-lg-7 col-xl-8 position-static p-0">
+
+                {{> main-menu }}
+
+                {{> mobile-menu }}
+
+            </div>
+            <div class="col-7 col-lg-3 col-xl-2 d-flex align-items-center">
+                <div class="languages">
+                    <button class="languages__btn languages__btn_arrow">
+                        <svg class="languages__icon">
+                            <use xlink:href="#flag-ru"></use>
+                        </svg>
+                        <span class="languages__country">ru</span>
+                    </button>
+                    <div class="languages__sublist">
+                        <a class="languages__item" href="#">
+                            <svg class="languages__icon">
+                                <use xlink:href="#flag-uk"></use>
+                            </svg>
+                            <span class="languages__country">uk</span>
+                        </a>
+                        <a class="languages__item" href="#">
+                            <svg class="languages__icon">
+                                <use xlink:href="#flag-en"></use>
+                            </svg>
+                            <span class="languages__country">en</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="search">
+                    <button class="search__btn">
+                        <svg class="search__magnifier">
+                            <use xlink:href="#magnifier"></use>
+                        </svg>
+                    </button>
+                    <form class="search__form">
+                        <input class="search__input" type="text" placeholder="Поиск по сайту...">
+                        <input class="search__submit" type="submit" value="Найти">
+                    </form>
+                </div>
+                <div class="basket">
+                    <a class="basket__btn" href="#">
+                        <svg class="basket__icon">
+                            <use xlink:href="#basket"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,30 @@
+.intro {
+    background: $smoky-white;
+
+    padding: 70px 0;
+
+    overflow-x: hidden;
+
+    &-title {
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+    }
+
+    // Home
+    &_home {
+        padding: 88px 0 50px;
+    }
+
+    @media (max-width: 992px) {
+        &_home {
+            padding: 56px 0 86px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &_home {
+            padding-top: 38px;
+        }
+    }
+}

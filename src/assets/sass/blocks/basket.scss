@@ -1,0 +1,44 @@
+.basket {
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border: none;
+        border-radius: 50%;
+        background: $light-gray;
+
+        cursor: pointer;
+        transition: background-color .5s ease;
+
+        &:hover {
+            background: $yellow;
+        }
+    }
+
+    &__icon {
+        width: 15px;
+        height: 14px;
+        fill: $black;
+
+        transition: fill .5s ease;
+
+        .basket__btn:hover & {
+            fill: $white;
+        }
+    }
+
+
+}
+
+@media (max-width: 360px) {
+    .basket {
+
+        &__btn {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

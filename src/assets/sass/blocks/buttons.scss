@@ -1,0 +1,84 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+
+    font-size: 12px;
+    font-weight: 700;
+    color: $white;
+
+    padding: 0 25px;
+
+    transition: color .5s ease, background-color .5s ease, border .5s ease, fill .5s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: $white;
+    }
+
+    @media (max-width: 576px) {
+        height: 37px;
+
+        padding: 0 15px;
+    }
+
+    // Btn Red
+    &_red {
+        background: $red;
+        border: 1px solid $red;
+
+        &:hover {
+            color: $red;
+
+            & .arrow div {
+                background: $red;
+
+                &:before {
+                    border-color: $red;
+                }
+            }
+        }
+    }
+
+    // Btn Yellow
+    &_yellow {
+        background: $yellow;
+    }
+
+    // Btn Black
+    &_black {
+        background: $black;
+        border: 1px solid $black;
+
+        &:hover {
+            color: $black;
+
+            & .btn-icon {
+                fill: $black;
+            }
+        }
+    }
+
+    // Arrow
+    & .arrow {
+        width: 15px;
+
+        margin-left: 10px;
+
+        & div {
+            background: $white;
+
+            transition: background-color .5s ease;
+
+            &:before {
+                border-color: $white;
+
+                transition: border .5s ease;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        font-size: 10px;
+    }
+}

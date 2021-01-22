@@ -1,0 +1,106 @@
+.search {
+
+    position: relative;
+    margin-right: 9px;
+
+    &__btn {
+        width: 36px;
+        height: 36px;
+        background: $light-gray;
+        border: none;
+        border-radius: 50%;
+
+        padding-top: 5px;
+
+        cursor: pointer;
+        transition: background-color .5s ease;
+
+        &:hover,
+        &.active {
+            background: $black;
+        }
+    }
+
+    &__magnifier {
+        width: 14px;
+        height: 14px;
+        fill: #2B2A29;
+
+        transition: fill .5s ease;
+
+        .search__btn:hover &,
+        .search__btn.active & {
+            fill: $white;
+        }
+    }
+
+    &__form {
+        display: flex;
+
+        position: absolute;
+        right: 0;
+        z-index: 15;
+
+        transition: all .5s ease;
+        visibility: hidden;
+        opacity: 0;
+
+        &.active {
+            margin-top: 11px;
+
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &__input {
+        width: 266px;
+        height: 38px;
+        border: $border;
+        border-right: none;
+
+        font-size: 12px;
+
+        padding-left: 20px;
+
+        transition: all .5s ease;
+
+        &::placeholder {
+            color: $dark-gray;
+        }
+
+        &:focus {
+            box-shadow: $shadow;
+        }
+    }
+    &__submit {
+        width: 59px;
+        height: 38px;
+        background-color: $red;
+        border: none;
+
+        color: $white;
+        font-size: 12px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: all 0.5s ease;
+
+        &:hover {
+            background-color: $white;
+            border: 1px solid $red;
+
+            color: $red;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .search {
+
+        &__btn {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

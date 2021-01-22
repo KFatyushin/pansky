@@ -1,0 +1,75 @@
+.arrows-slide {
+    position: absolute;
+    top: 26px;
+    right: 15px;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+        top: 8px;
+    }
+
+    &__prev,
+    &__next {
+        width: 34px;
+        height: 34px;
+        background: $light-gray;
+        border: none;
+        border-radius: 30px;
+
+        position: relative;
+
+        cursor: pointer;
+
+        transition: background-color .5s ease;
+
+        @media (max-width: 768px) {
+            width: 26px;
+            height: 26px;
+        }
+
+        & .arrow {
+            width: 35px;
+
+            margin-top: -4px;
+            position: absolute;
+            top: 50%;
+
+            @media (max-width: 768px) {
+                width: 20px;
+            }
+
+            & div {
+                background: $gray;
+
+                &:before {
+                    border-color: $gray;
+                }
+            }
+        }
+
+        &:hover {
+            background: $black;
+        }
+    }
+
+    &__prev {
+        margin-right: 62px;
+
+        @media (max-width: 768px) {
+            margin-right: 22px;
+        }
+
+        & .arrow {
+            transform: scale(-1);
+
+            left: 50%;
+        }
+    }
+
+    &__next {
+
+        & .arrow {
+            right: 50%;
+        }
+    }
+}

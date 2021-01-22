@@ -1,0 +1,17 @@
+.latest-arrs {
+
+    & .section-subtitle,
+    & .section-title {
+        text-align: center;
+    }
+
+    &-products {
+        margin-top: 50px;
+        margin-bottom: -50px;
+
+        @media (max-width: 992px) {
+            margin-top: 30px;
+            margin-bottom: -30px;
+        }
+    }
+}

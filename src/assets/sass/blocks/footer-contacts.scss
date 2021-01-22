@@ -1,0 +1,73 @@
+.footer-contacts {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        min-width: 140px;
+        max-width: 240px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 34px;
+        height: 34px;
+        border: $border;
+        border-radius: 30px;
+
+        margin-right: 14px;
+    }
+
+    &__phone {
+        width: 9px;
+        height: 10px;
+    }
+
+    &__gps {
+        width: 8px;
+        height: 10px;
+    }
+
+    &__email {
+        width: 14px;
+        height: 10px;
+    }
+
+    &__title {
+        font-weight: 500;
+        color: $dark-gray;
+
+        margin-bottom: 8px;
+    }
+
+    &__txt {
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+        margin-left: -30px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 25px 0;
+    }
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin-bottom: -20px;
+
+        &__item {
+            width: 220px;
+
+            margin-bottom: 20px;
+        }
+    }
+
+
+}

@@ -1,0 +1,229 @@
+.product-item {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 50px;
+
+    @media (max-width: 992px) {
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        background: $smoky-white;
+
+        padding: 20px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: -1;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__category {
+        color: $dark-gray;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        padding-right: 20px;
+        margin: 7px 0 9px;
+    }
+
+    &__price {
+        font-weight: 700;
+        color: $red;
+    }
+
+    &__old-price {
+        font-weight: 400;
+        text-decoration-line: line-through;
+        color: #b6b6b6;
+
+        margin-right: 11px;
+    }
+
+    &__discount,
+    &__basket,
+    &__buy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 30px;
+
+        position: absolute;
+
+        transition: background-color .5s ease;
+        animation: product-animation-btn .5s ease forwards;
+
+        &:hover .product-item__prompt {
+            display: inline;
+        }
+    }
+
+    &__basket,
+    &__buy {
+        display: none;
+        background: $light-gray;
+    }
+
+    &:hover &__basket,
+    &:hover &__buy {
+        display: flex;
+    }
+
+    &__discount {
+        background: $red;
+
+        font-size: 12px;
+        font-weight: 500;
+        color: $white;
+
+        top: 10px;
+        left: 10px;
+    }
+
+    &__basket {
+        top: 10px;
+
+        .basket-icon {
+            width: 14px;
+            height: 13px;
+
+            transition: fill .5s ease;
+        }
+
+        &:hover {
+            background: $red;
+
+            .basket-icon {
+                fill: $white;
+            }
+        }
+    }
+
+    &__buy {
+        top: 54px;
+
+        .buy-icon {
+            width: 15px;
+            height: 15px;
+
+            transition: fill .5s ease;
+        }
+
+        &:hover {
+            background: $yellow;
+
+            .buy-icon {
+                fill: $white;
+            }
+        }
+    }
+
+    &__prompt {
+        display: none;
+        width: 120px;
+        background: $black;
+
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 26px;
+        color: $white;
+
+        padding-left: 10px;
+        position: absolute;
+        z-index: -1;
+
+        animation: product-animation-prompt .5s ease forwards;
+    }
+
+    @media (max-width: 480px) {
+        &__img {
+            margin-bottom: 5px;
+        }
+
+        &__category {
+            font-size: 10px;
+        }
+
+        &__title {
+            font-size: 12px;
+
+            margin: 2px 0 4px;
+        }
+
+        &__old-price {
+            font-size: 12px;
+        }
+
+        &__discount,
+        &__basket,
+        &__buy {
+            width: 25px;
+            height: 25px;
+        }
+
+        &__discount {
+            font-size: 10px;
+
+            top: 5px;
+        }
+
+        &__basket {
+            top: 5px;
+
+            .basket-icon {
+                width: 12px;
+            }
+        }
+
+        &__buy {
+            top: 35px;
+            right: 5px;
+
+            .buy-icon {
+                width: 12px;
+            }
+        }
+
+        &__basket,
+        &__buy {
+            &:hover .product-item__prompt {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes product-animation-btn {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 10px;
+    }
+}
+@keyframes product-animation-prompt {
+    from {
+        right: 15px;
+    }
+
+    to {
+        right: 25px;
+    }
+}

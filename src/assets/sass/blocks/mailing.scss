@@ -1,0 +1,41 @@
+.mailing {
+    text-align: center;
+
+    & .section-title {
+        margin-bottom: 11px;
+    }
+
+    &-prompt {
+        max-width: 500px;
+
+        margin: 0 auto 30px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &-form {
+        display: flex;
+        justify-content: center;
+
+        &__input {
+            width: 100%;
+            max-width: 470px;
+            border: $border;
+            border-right: none;
+
+            font-family: 'Gilroy', sans-serif;
+            font-size: 14px;
+            color: $dark-gray;
+
+            padding-left: 30px;
+
+            @media (max-width: 576px) {
+                font-size: 10px;
+
+                padding-left: 10px;
+            }
+        }
+    }
+}

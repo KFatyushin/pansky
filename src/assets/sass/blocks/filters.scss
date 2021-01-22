@@ -1,0 +1,17 @@
+.filters {
+
+    &__btn {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__icon {
+        width: 14px;
+        height: 14px;
+        fill: $white;
+
+        margin-right: 10px;
+
+        transition: fill .5s ease;
+    }
+}
